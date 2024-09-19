@@ -1,0 +1,396 @@
+* {
+    box-sizing: border-box;
+    line-height: 1.4;
+}
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+    --DarkGray: hsl(0, 0%, 55%);
+    --VeryDarkGray: hsl(0, 0%, 41%);
+}
+
+@font-face {
+    font-family: "Josefin Sans", sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+}
+
+@font-face {
+    font-family: "Alata", sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+body {
+    font-size: 15px;
+}
+
+.desktop {
+    display: block;
+}
+
+.mobile {
+    display: none;
+}
+
+.header {
+    background: url(../images/desktop/image-hero.jpg) no-repeat;
+    background-position: center/cover;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    padding: 60px 150px;
+}
+
+.navlist {
+    float: right;
+    width: 40%;
+    margin-top: -20px;
+}
+
+ul li {
+    float: left;
+    width: 20%;
+}
+
+ul a {
+    text-decoration: none;
+    color: white;
+}
+
+.navlist ul li a::after {
+    width: 0s;
+    content: "";
+    height: 2px;
+    bottom: -8px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(50%);
+}
+
+.anchor:hover {
+    padding-bottom: 2px;
+    box-shadow: 0px 2px 0 white;
+}
+
+.headbox {
+    font-size: 75px;
+    color: white;
+    border: 2px white solid;
+    width: 645px;
+    height: 275px;
+    margin-top: 220px;
+    padding: 20px 50px;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 100;
+}
+
+.menu {
+    display: none;
+}
+
+.vr {
+    padding: 160px 165px;
+}
+
+.landingpage {
+    position: relative;
+}
+
+.landingbox {
+    border: 1px white solid;
+    height: 340px;
+    width: 600px;
+    padding: 100px 80px;
+    position: absolute;
+    right: 130px;
+    bottom: 160px;
+    background-color: white;
+}
+
+.landingbox p {
+    position: relative;
+    line-height: 1.5;
+    margin-top: 40px;
+    color: #999;
+}
+
+.landingbox h1 {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 100;
+    font-size: 50px;
+    letter-spacing: 3px;
+}
+
+.box {
+    padding: 40px 165px;
+}
+
+.box h1 {
+    font-size: 40px;
+    font-weight: 100;
+}
+
+button {
+    background-color: white;
+    width: 135px;
+    height: 35px;
+    cursor: pointer;
+    margin-top: -42px;
+    height: 35px;
+    padding: 10px 36px;
+    float: right;
+}
+
+
+button:hover {
+    color: white;
+    background-color: black;
+    transition: all ease 0.6s;
+}
+
+.container {
+    display: flex;
+    flex-flow: column;
+    margin-left: 150px;
+    gap: 35px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.image {
+    position: relative;
+}
+
+.text {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+}
+
+.layer {
+    position: absolute;
+    background-color: transparent;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.layer h3 {
+    margin-top: 400px;
+}
+
+.layer:hover {
+    background-color: rgba(156, 163, 163, 0.4);
+    color: black;
+    transition: all ease 0.5s;
+}
+
+footer {
+    margin-top: 175px;
+}
+
+.footland {
+    background-color: black;
+    padding: 60px 165px;
+}
+
+.navlist1 {
+    margin-top: 30px;
+}
+
+.navlist1 ul li {
+    float: left;
+    width: 8%;
+}
+
+.navicon {
+    float: right;
+    margin-top: -60px;
+}
+
+.navicon img {
+    margin-right: 20px;
+
+}
+
+@media (max-width:768px) {
+    .mobile {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .header {
+        background-image: url(/images/mobile/image-hero.jpg);
+        width: 100%;
+        height: 1200px;
+        padding: 80px 40px;
+    }
+
+    .headbox {
+        font-size: 50px;
+        width: 600px;
+        height: 300px;
+        margin-top: 300px;
+        font-size: 70px;
+    }
+
+    .menu {
+        display: block;
+        cursor: pointer;
+        float: right;
+        background-color: rgba(195, 205, 205, 0.2);
+        height: 250px;
+        width: 150px;
+        border-radius: 20px;
+        position: absolute;
+        left: 450px;
+    }
+
+    .close {
+        margin-left: 175px;
+        cursor: pointer;
+        margin-top: -22px;
+    }
+
+    .navlistmenu {
+        margin-left: 50px;
+    }
+
+    .navlistmenu li {
+        float: none;
+        margin-top: 30px;
+    }
+
+    .dropdown {
+        width: 30px;
+    }
+
+    .dropdown img {
+        position: relative;
+        z-index: 1;
+        margin-left: 560px;
+        margin-top: -20px;
+        cursor: pointer;
+        display: block;
+    }
+
+    .vr {
+        padding: 40px;
+    }
+
+    .landingbox {
+        height: 400px;
+        position: relative;
+        padding: 20px;
+        margin-left: 200px;
+        margin-top: 150px;
+    }
+
+    .landingbox h1 {
+        font-size: 65px;
+    }
+
+    .landingbox p {
+        font-size: 30px;
+    }
+
+    .box {
+        padding: 60px;
+    }
+
+    .box h1 {
+        font-size: 60px;
+        font-weight: 100;
+        margin-left: 20px;
+    }
+
+    button {
+        width: 320px;
+        height: 80px;
+        margin-top: 2300px;
+        margin-right: 150px;
+    }
+
+    .container {
+        display: flex;
+        flex-flow: column;
+        margin-left: 50px;
+        gap: 35px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .layer h3 {
+        margin-top: 200px;
+        text-align: left;
+    }
+
+    .footland .logo {
+        text-align: center;
+    }
+
+    .footland {
+        background-color: black;
+        padding: 65px;
+    }
+
+    .navlist1 {
+        margin-top: 30px;
+    }
+
+    .navlist1 ul li {
+        float: none;
+        padding: 20px;
+        margin-left: 270px;
+    }
+
+    .navicon {
+        float: none;
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .navicon img {
+        margin-right: 30px;
+
+    }
+}
+
+
+/* .our-creation-items {
+    position: relative;
+    width: 250px;
+    height: 450px;
+    background: url(../images/desktop/image-soccer-team.jpg) no-repeat;
+}
+
+h3 {
+    text-align: center;
+    color: #fff;
+    margin-top: 400px;
+    font-size: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.our-creation-item:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ffffff9e;
+    opacity: 0;
+    transition: all ease 0.2s;
+} */
